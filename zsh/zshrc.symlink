@@ -1,28 +1,19 @@
 # Path to dotfiles folder.
-export DOTFILES=$HOME/dotfiles
-export COMPLETION_PATH=$DOTFILES/zsh/completion.zsh
+export DOTFILES=$HOME/dev/dotfiles
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]; then
-  source ~/.localrc
-fi
-
-# Load everything but the completion files
-for file in $DOTFILES/zsh/*.zsh; do
-  if [ $file == $COMPLETION_PATH ]; then continue; fi
-  source $file
-done
+source $DOTFILES/zsh/env_variables.zsh
+source $DOTFILES/zsh/config.zsh
+source $DOTFILES/zsh/aliases.zsh
+source $DOTFILES/zsh/completion.zsh
 
 # Load scripts in dotfiles/bin
 for file in $DOTFILES/bin/*.sh; do
   source $file
 done;
 
-# Initialize autocomplete here, otherwise functions won't be loaded
-autoload -Uz compinit
-compinit
-
-# Load every completion after autocomplete loads
-source $COMPLETION_PATH
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]; then
+  source ~/.localrc
+fi;

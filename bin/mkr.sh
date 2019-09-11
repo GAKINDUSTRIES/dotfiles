@@ -5,6 +5,6 @@
 
 # Author: Guillermo Kuster
 
-mkr () {
+mkr() {
 	mkdir -p "$@" && cd "$@";
 }

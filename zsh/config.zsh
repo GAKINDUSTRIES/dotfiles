@@ -9,8 +9,8 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sublime bundler npm rails zsh-syntax-highlighting history web-search vi-mode)
 
-# Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+# Path to oh-my-zsh installation.
+export ZSH=/Users/guille/.oh-my-zsh
 
-# Load FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Load oh-my-zsh
+source $ZSH/oh-my-zsh.sh

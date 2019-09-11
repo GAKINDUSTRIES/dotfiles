@@ -1,6 +1,3 @@
-# Path to oh-my-zsh installation.
-export ZSH=/Users/guille/.oh-my-zsh
-
 # # Add path directory for custom scripts
 # export PATH=$DOTFILES/bin:$PATH
 

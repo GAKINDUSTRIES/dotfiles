@@ -6,7 +6,7 @@
 
 # Author: https://github.com/paulirish/statikk
 
-server () {
+server() {
   local port="${1:-8000}"
   open "http://localhost:${port}/" &
   statikk --port "$port" .

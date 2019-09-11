@@ -5,11 +5,13 @@
 
 # Author: Guillermo Kuster
 
-local port="${1:-3000}";
-local pid="$(lsof -i tcp:$port -t)";
-if [[ $pid ]]; then
-  kill -9 $pid
-  echo "Server killed at port $port"
-else
-  echo "No server found running at port $port"
-fi;
+kill_server() {
+  local port="${1:-3000}";
+  local pid="$(lsof -i tcp:$port -t)";
+  if [[ $pid ]]; then
+    kill -9 $pid
+    echo "Server killed at port $port"
+  else
+    echo "No server found running at port $port"
+  fi;
+}
