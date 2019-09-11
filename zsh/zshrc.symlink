@@ -7,7 +7,7 @@ source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/completion.zsh
 
 # Load scripts in dotfiles/bin
-for file in $DOTFILES/bin/*.sh; do
+for file in $DOTFILES/scripts/*.sh; do
   source $file
 done;
 
