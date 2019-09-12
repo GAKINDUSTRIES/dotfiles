@@ -50,3 +50,5 @@ alias dev="cd ~/dev/"
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'                       # Size,show type,human readable
 alias ldot='ls -ld .*'                  # Show all
+alias ls_hidden="ls -d.?*"              # Show only hidden files
+alias ls_folders="ls -d */"             # Show only folders
