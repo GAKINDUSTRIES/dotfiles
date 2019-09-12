@@ -4,6 +4,9 @@
 # Add Java installation reference
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+# Add rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Import scripts
 export PATH=~/Library/Python/3.6/bin:$PATH
 
@@ -27,13 +30,16 @@ fi
 # Define Neovim as default editor
 export EDITOR='nvim'
 
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # Add yarn to PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add NVM to PATH for scripting
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# Load NVM into a shell session *as a function*
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
