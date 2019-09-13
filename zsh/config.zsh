@@ -7,7 +7,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime bundler npm rails zsh-syntax-highlighting history web-search vi-mode)
+plugins=(sublime bundler npm rails zsh-syntax-highlighting history web-search vi-mode)
 
 # Path to oh-my-zsh installation.
 export ZSH=/Users/guille/.oh-my-zsh
