@@ -1,0 +1,14 @@
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+[alias]
+  co = checkout
+  st = status
+  ec = config --global -e
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  amend = commit -a --amend
+  br = branch
+[core]
+	editor = nvim
+	excludesfile = ~/dotfiles/git/.gitignore_global

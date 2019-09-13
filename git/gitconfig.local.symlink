@@ -1,0 +1,5 @@
+[user]
+	name = USERNAME HERE
+	email = EMAIL HERE
+[credential]
+  helper = GIT_CREDENTIAL_HELPER   # Ex: osxkeychain, cache, etc
