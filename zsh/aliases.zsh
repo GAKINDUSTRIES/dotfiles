@@ -1,6 +1,5 @@
 # General
 alias aliases='alias | fzf'
-alias scripts='alias | fzf'
 alias grep='grep --color=auto'
 alias reload!='source ~/.zshrc'         # Reload zsh config
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
@@ -50,5 +49,9 @@ alias dev="cd ~/dev/"
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'                       # Size,show type,human readable
 alias ldot='ls -ld .*'                  # Show all
-alias ls_hidden="ls -d .?*"              # Show only hidden files
+alias ls_hidden="ls -d .?*"             # Show only hidden files
 alias ls_folders="ls -d */"             # Show only folders
+
+# Unalias
+unalias rg                              # Disable 'rails generate' alias to use ripgrep rg
+unalias sc                              # Disable rails alias to use "script search"" script
