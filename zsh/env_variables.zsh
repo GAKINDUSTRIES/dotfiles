@@ -21,10 +21,20 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Define Ag as default searcher for FZF
+# Set up search engine for FZF
+# Possible options are: [ag, rg]
 # TODO, add .gitignore to dotfiles
-if type ag &> /dev/null; then
-    export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+export DEFAULT_SEARCHER='ag'
+if [[ $DEFAULT_SEARCHER == 'ag' ]]; then
+  # Define Ag as default searcher for FZF
+  if type ag &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='ag -p ~/.ignore -g ""'
+  fi
+else
+  # Define rigrep as default searcher for FZF
+  if type rg &> /dev/null; then;
+    export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+  fi
 fi
 
 # Define Neovim as default editor
