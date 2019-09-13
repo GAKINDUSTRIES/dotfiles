@@ -1,0 +1,16 @@
+# Files ignores by FZF
+
+.DS_Store
+.hg
+.svn
+node_modules
+ios
+android
+Library
+
+###################
+# Temporary files
+*.kate-swp
+*.swp
+*.swo
+*~
