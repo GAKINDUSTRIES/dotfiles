@@ -23,7 +23,6 @@ export LC_ALL=en_US.UTF-8
 
 # Set up search engine for FZF
 # Possible options are: [ag, rg]
-# TODO, add .gitignore to dotfiles
 export DEFAULT_SEARCHER='ag'
 if [[ $DEFAULT_SEARCHER == 'ag' ]]; then
   # Define Ag as default searcher for FZF
