@@ -1,8 +1,10 @@
 # General
 alias aliases='alias | fzf'
 alias grep='grep --color=auto'
+alias help="tldr"                       # See man pages in a better display. Requires tldr installed
 alias reload!='source ~/.zshrc'         # Reload zsh config
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
+
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
