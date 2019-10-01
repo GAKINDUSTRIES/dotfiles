@@ -40,7 +40,7 @@ fi
 export EDITOR='nvim'
 
 # Add yarn to PATH
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
