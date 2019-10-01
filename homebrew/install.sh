@@ -29,11 +29,12 @@ fi
 brew update
 
 
-echo "Installing packages and cask apps..."
 # Install all our dependencies with bundle (See Brewfile)
+echo "Installing packages and cask apps..."
 brew tap caskroom/cask
 brew tap homebrew/bundle
 brew bundle
 
+# Remove outdated versions from the cellar
 echo "Cleaning up..."
 brew cleanup
