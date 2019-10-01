@@ -1,8 +1,11 @@
 # Install ZSH and plugins/themes
+
 brew 'zsh'
 brew 'zsh-completions'
 
+
 # Install Binaries
+
 brew 'ands'                       # C/C++ resolver library and DNS resolver utilities
 brew 'autoconf'                   # Automatic configure script builder
 brew 'automake'                   # Tool for generating GNU Standards-compliant Makefiles
@@ -37,10 +40,12 @@ brew 'wget'                       # Internet file retriever
 brew 'yarn --without-node'        # Install yarn but ignore installing node so it uses nvm node instance
 brew 'tldr'                       # Simplified and community-driven man pages (required for 'help' script)
 
+
 # Apps
 
 cask 'chromedriver'               # Replaces PhantomJS which is no longer maintained
 cask 'clockify'                   # Time tracker
+cask 'kitty'                      # The fast, featureful, GPU based, terminal emulator
 cask 'iterm2'                     # Alternative terminal for kitty
 cask 'google-chrome'              # Google Web browser
 cask 'licecap'                    # Simple animated screen captures
