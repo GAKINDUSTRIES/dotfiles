@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# This script switches shell between zsh, bash, fish, etc.
-# Specified shell should be in /etc/shells
+# This script creates a new directory and cd into it.
 
 # Author: Guillermo Kuster
 
