@@ -51,3 +51,7 @@ desktop.ini
 *.swo
 *~
 *#
+
+# External tools files #
+###################
+tags
