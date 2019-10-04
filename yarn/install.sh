@@ -8,6 +8,7 @@ echo "Setting up Yarn....."
 echo "Configuring base location for symlinks"
 echo ""
 yarn config set prefix ~/.yarn
+
 echo "Global packages will have their executables installed to ~/.yarn/bin"
 echo ""
 echo "The global installation folder that houses the global node_modules is $(yarn global dir)"

@@ -18,8 +18,6 @@
 #   store before running the bootstrap script. Otherwise, Homebrew can't access
 #   the Xcode libraries as the agreement hasn't been accepted yet.
 
-echo "Setting up your Homebrew packages"
-
 # Check for Homebrew and install if it doesn't exist
 if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
