@@ -147,6 +147,10 @@ info "Installing Yarn "
 $DOTFILES_ROOT/yarn/install.sh
 success  "Yarn installed!!"
 
+info "Installing RVM "
+$DOTFILES_ROOT/ruby/install.sh
+success  "RVM installed!!"
+
 info "Setting up zsh"
 link_files_in_folder "$DOTFILES/zsh"
 chsh -s /bin/zsh # Switch shell to zsh
