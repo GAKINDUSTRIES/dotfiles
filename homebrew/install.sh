@@ -18,6 +18,10 @@
 #   store before running the bootstrap script. Otherwise, Homebrew can't access
 #   the Xcode libraries as the agreement hasn't been accepted yet.
 
+# Set up root directory
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
 # Check for Homebrew and install if it doesn't exist
 if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -29,9 +33,9 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 echo "Installing packages and cask apps..."
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 brew tap homebrew/bundle
-brew bundle
+brew bundle --file=$DOTFILES_ROOT/homebrew/Brewfile
 
 # Remove outdated versions from the cellar
 echo "Cleaning up..."
