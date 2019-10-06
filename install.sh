@@ -159,13 +159,14 @@ install_dotfiles () {
   success "Zsh setup finished!!"
 
   section "Kitty"
-  link_files_in_folder "$DOTFILES_ROOT/kitty"
+  link_file "$DOTFILES_ROOT/kitty/kitty.conf.symlink" "$HOME/.config/kitty/kitty.conf"
   success "Kitty setup finished"
 
   section "Vim Environment and Neovim"
   $DOTFILES_ROOT/vim-environment/install.sh
 
-  link_files_in_folder "$DOTFILES_ROOT/nvim"
+  link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
+  link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
   success "Vim setup finished"
 
   Section "Tmux"
