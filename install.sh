@@ -173,3 +173,7 @@ success "Tmux setup finished"
 info "Setting up Git"
 setup_gitconfig
 success "Git setup finished"
+
+info "Finalizing last details..."
+link_file "$DOTFILES_ROOT/ignore.symlink" "$HOME/.ignore"
+success "Configuration completed. Enjoy :)"
