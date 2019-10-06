@@ -13,8 +13,8 @@
   br = branch
 [core]
 	editor = nvim
-	excludesfile = ~/dev/dotfiles/git/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [init]
-	templatedir = ~/dev/dotfiles/.git_template
+	templatedir = ~/.git_template/
 [commit]
-  template = ~/dev/dotfiles/.git_template/gitmessage
+  template = ~/.git_template//gitmessage

@@ -110,8 +110,6 @@ link_file () {
 }
 
 setup_gitconfig () {
-  info 'setup gitconfig'
-
   git_credential='cache'
   if [ "$(uname -s)" == "Darwin" ]
   then
@@ -125,6 +123,7 @@ setup_gitconfig () {
 
   sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > $HOME/.gitconfig.local
 
+  link_file "$DOTFILES_ROOT/git/git_template" "$HOME/.git_template"
   link_file "$DOTFILES_ROOT/git/gitconfig.symlink" "$HOME/.gitconfig"
   link_file "$DOTFILES_ROOT/git/gitignore_global.symlink" "$HOME/.gitignore_global"
 }
