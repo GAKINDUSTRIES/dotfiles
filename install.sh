@@ -30,8 +30,8 @@ fail () {
   exit
 }
 
-separator () {
-  printf "\n #################### \n"
+section () {
+  printf "\n\n ############  Setting up $1  ############ \n\n"
 }
 
 link_file () {
@@ -142,42 +142,42 @@ install_dotfiles () {
 
   echo "Setting up your Mac... \n\n"
 
-  info "Installing brew Cask binary packages"
+  section "Brew Cask binary packages"
   $DOTFILES_ROOT/homebrew/install.sh 2>&1
   success  "Homebrew installed!!"
 
-  info "Installing Yarn "
+  section "Yarn"
   $DOTFILES_ROOT/yarn/install.sh
   success  "Yarn installed!!"
 
-  info "Installing RVM "
+  section "RVM"
   $DOTFILES_ROOT/ruby/install.sh
   success  "RVM installed!!"
 
-  info "Setting up zsh"
+  section "Zsh"
   link_files_in_folder "$DOTFILES/zsh"
   chsh -s /bin/zsh # Switch shell to zsh
   success "Zsh setup finished!!"
 
-  info "Setting up Kitty"
+  section "Kitty"
   link_files_in_folder "$DOTFILES_ROOT/kitty"
   success "Kitty setup finished"
 
-  info "Setting up Vim Environment and Neovim"
+  section "Vim Environment and Neovim"
   $DOTFILES_ROOT/vim-environment/install.sh
 
   link_files_in_folder "$DOTFILES_ROOT/nvim"
   success "Vim setup finished"
 
-  info "Setting up Tmux"
+  Section "Tmux"
   link_files_in_folder "$DOTFILES_ROOT/tmux"
   success "Tmux setup finished"
 
-  info "Setting up Git"
+  section "Git"
   setup_gitconfig
   success "Git setup finished"
 
-  info "Finalizing last details..."
+  section "ignore file"
   link_file "$DOTFILES_ROOT/ignore.symlink" "$HOME/.ignore"
   success "Configuration completed. Enjoy :)"
 }
