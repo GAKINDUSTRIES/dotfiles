@@ -33,7 +33,6 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 echo "Installing packages and cask apps..."
-brew tap homebrew/cask-cask
 brew tap homebrew/bundle
 brew bundle --file=$DOTFILES_ROOT/homebrew/Brewfile
 

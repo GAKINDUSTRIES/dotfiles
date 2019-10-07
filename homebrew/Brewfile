@@ -6,7 +6,6 @@ brew 'zsh-completions'
 
 # Install Binaries
 
-brew 'ands'                       # C/C++ resolver library and DNS resolver utilities
 brew 'autoconf'                   # Automatic configure script builder
 brew 'automake'                   # Tool for generating GNU Standards-compliant Makefiles
 brew 'libtool'                    # Generic library support script

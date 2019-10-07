@@ -145,6 +145,10 @@ install_dotfiles () {
   $DOTFILES_ROOT/homebrew/install.sh 2>&1
   success  "Homebrew installed!!"
 
+  section "NVM"
+  $DOTFILES_ROOT/nvm/install.sh
+  success  "Yarn installed!!"
+
   section "Yarn"
   $DOTFILES_ROOT/yarn/install.sh
   success  "Yarn installed!!"
