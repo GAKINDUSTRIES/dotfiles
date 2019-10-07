@@ -169,11 +169,13 @@ install_dotfiles () {
   section "Vim Environment and Neovim"
   $DOTFILES_ROOT/vim-environment/install.sh
 
+  # Create nvim folder if not exists
+  [ ! -d "$HOME/.config/nvim" ] && mkdir "$HOME/.config/nvim"
   link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
   link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
   success "Vim setup finished"
 
-  Section "Tmux"
+  section "Tmux"
   link_files_in_folder "$DOTFILES_ROOT/tmux"
   success "Tmux setup finished"
 
