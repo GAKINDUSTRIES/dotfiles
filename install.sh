@@ -139,7 +139,7 @@ link_files_in_folder () {
 install_dotfiles () {
   local overwrite_all=false backup_all=false skip_all=false
 
-  echo "Setting up your Mac... \n\n"
+  printf "Setting up your Mac... \n\n"
 
   section "Brew Cask binary packages"
   $DOTFILES_ROOT/homebrew/install.sh 2>&1

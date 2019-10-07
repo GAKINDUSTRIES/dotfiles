@@ -42,6 +42,7 @@ brew 'tldr'                       # Simplified and community-driven man pages (r
 
 # Apps
 
+cask 'java'                       # Install JDK which contains JRE + compiler (javac) + other tools
 cask 'chromedriver'               # Replaces PhantomJS which is no longer maintained
 cask 'clockify'                   # Time tracker
 cask 'kitty'                      # The fast, featureful, GPU based, terminal emulator
