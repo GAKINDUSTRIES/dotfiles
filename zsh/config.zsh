@@ -10,7 +10,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(sublime bundler npm rails zsh-syntax-highlighting history web-search vi-mode)
 
 # Path to oh-my-zsh installation.
-export ZSH=/Users/guille/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh

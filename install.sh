@@ -159,7 +159,7 @@ install_dotfiles () {
 
   section "Zsh"
   link_files_in_folder "$DOTFILES/zsh"
-  chsh -s /bin/zsh # Switch shell to zsh
+  $DOTFILES_ROOT/zsh/install.sh
   success "Zsh setup finished!!"
 
   section "Kitty"
