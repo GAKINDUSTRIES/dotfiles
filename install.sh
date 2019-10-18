@@ -141,6 +141,9 @@ install_dotfiles () {
 
   printf "Setting up your Mac... \n\n"
 
+  # Create symlink in $HOME. Needed for some scripts
+  ln -s $DOTFILES_ROOT $HOME
+
   section "Brew Cask binary packages"
   $DOTFILES_ROOT/homebrew/install.sh 2>&1
   success  "Homebrew installed!!"
