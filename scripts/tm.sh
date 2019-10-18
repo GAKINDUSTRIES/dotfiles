@@ -2,7 +2,7 @@
 
 tm() {
   # abort if we're already inside a TMUX session
-  [ "$TMUX" == "" ] || exit 0
+  [ "$TMUX" = "" ] || exit 0
   # startup a "default" session if non currently exists
   # tmux has-session -t _default || tmux new-session -s _default -d
 
