@@ -36,7 +36,7 @@ brew 'redis'                      # Persistent key-value database
 brew 'memcached'                  # High performance, distributed memory object caching system
 brew 'tmux'                       # Terminal multiplexer
 brew 'wget'                       # Internet file retriever
-brew 'yarn, args: ["ignore-dependencies"] # Install yarn but ignore installing node so it uses nvm node instance
+brew 'yarn', args: ["ignore-dependencies"] # Install yarn but ignore installing node so it uses nvm node instance
 brew 'tldr'                       # Simplified and community-driven man pages (required for 'help' script)
 brew 'zsh-syntax-highlighting'    # Syntax highlighting for the shell zsh
 
