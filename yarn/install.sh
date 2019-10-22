@@ -16,6 +16,7 @@ echo "The global installation folder that houses the global node_modules is $(ya
 # Packages that will be installed globally
 PACKAGES=(
   statikk
+  neovim
 )
 
 echo ""
