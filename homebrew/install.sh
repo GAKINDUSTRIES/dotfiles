@@ -36,6 +36,9 @@ echo "Installing packages and cask apps..."
 brew tap homebrew/bundle
 brew bundle --file=$DOTFILES_ROOT/homebrew/Brewfile
 
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
 # Remove outdated versions from the cellar
 echo "Cleaning up..."
 brew cleanup
