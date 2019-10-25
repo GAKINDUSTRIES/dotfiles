@@ -55,5 +55,9 @@ alias ls_hidden="ls -d .?*"             # Show only hidden files
 alias ls_folders="ls -d */"             # Show only folders
 
 # Unalias
-unalias rg                              # Disable 'rails generate' alias to use ripgrep rg
+
+case $(type rg) in                      # For oh-my-zsh older versions, check if alias exists
+  (*alias*) unalias rg;;                # For newer oh-my-zsh versions, rg alias was removed
+esac                                    # Reference here: https://github.com/robbyrussell/oh-my-zsh/pull/7858
+
 unalias sc                              # Disable rails alias to use "script search"" script
