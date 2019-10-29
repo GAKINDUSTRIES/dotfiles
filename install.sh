@@ -142,7 +142,7 @@ install_dotfiles () {
   printf "Setting up your Mac... \n\n"
 
   # Create symlink in $HOME. Needed for some scripts
-  ln -s $DOTFILES_ROOT $HOME
+  link_file $DOTFILES_ROOT/ $HOME/dotfiles
 
   section "Brew Cask binary packages"
   $DOTFILES_ROOT/homebrew/install.sh 2>&1
@@ -156,14 +156,14 @@ install_dotfiles () {
   $DOTFILES_ROOT/yarn/install.sh
   success  "Yarn installed!!"
 
+  section "Zsh"
+  link_files_in_folder "$DOTFILES_ROOT/zsh"
+  $DOTFILES_ROOT/zsh/install.sh
+  success "Zsh setup finished!!"
+
   section "RVM"
   $DOTFILES_ROOT/ruby/install.sh
   success  "RVM installed!!"
-
-  section "Zsh"
-  link_files_in_folder "$DOTFILES/zsh"
-  $DOTFILES_ROOT/zsh/install.sh
-  success "Zsh setup finished!!"
 
   section "Kitty"
   link_file "$DOTFILES_ROOT/kitty/kitty.conf.symlink" "$HOME/.config/kitty/kitty.conf"
