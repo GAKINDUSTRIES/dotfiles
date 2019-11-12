@@ -54,6 +54,18 @@ alias ldot='ls -ld .*'                  # Show all
 alias ls_hidden="ls -d .?*"             # Show only hidden files
 alias ls_folders="ls -d */"             # Show only folders
 
+# kubectl aliases
+alias k='kubectl'
+alias ka='kubectl apply --recursive -f'
+alias kex='kubectl exec -i -t'
+alias klo='kubectl logs -f'
+alias kp='kubectl proxy'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias krm='kubectl delete'
+alias kgpo='kubectl get pods'
+alias kdpo='kubectl describe pods'
+
 # Unalias
 
 case $(type rg) in                      # For oh-my-zsh older versions, check if alias exists
