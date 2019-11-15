@@ -18,3 +18,5 @@
 	templatedir = ~/.git_template/
 [commit]
   template = ~/.git_template//gitmessage
+[push]
+	default = current
