@@ -63,8 +63,9 @@ alias kp='kubectl proxy'
 alias kg='kubectl get'
 alias kd='kubectl describe'
 alias krm='kubectl delete'
-alias kgpo='kubectl get pods'
-alias kdpo='kubectl describe pods'
+alias kgp='kubectl get pods'
+alias kdp='kubectl describe pods'
+alias kgp='kubectl get deployments'
 
 # Unalias
 
