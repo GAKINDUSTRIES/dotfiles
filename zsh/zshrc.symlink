@@ -17,3 +17,5 @@ done;
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi;
+
+source $DOTFILES/zsh/zshrc_after.zsh
