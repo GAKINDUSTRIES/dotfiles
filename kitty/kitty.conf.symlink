@@ -26,7 +26,6 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 font_size 14
 font_family Hack Nerd Font Bold
 
-
 #: Font size (in pts)
 
 # adjust_line_height  0
