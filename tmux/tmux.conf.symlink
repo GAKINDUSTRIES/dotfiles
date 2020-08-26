@@ -20,7 +20,7 @@ unbind =                                               # tile all windows
 bind = select-layout tiled
 
 # set Zsh as default shell for Tmux
-set-option -g default-command "/bin/zsh"
+set-option -g default-command "/usr/local/bin/zsh"
 
 # edit configuration
 bind e new-window -n '~/.tmux.conf.local' "sh -c '\${EDITOR:-vim} tmux source ~/.tmux.conf && tmux display \"~/.tmux.conf sourced\"'"

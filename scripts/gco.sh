@@ -6,7 +6,7 @@
 
 gco() {
   local branches branch
-  branches=$(git --no-pager branch -vv) &&
+  branches=$(git --no-pager branch) &&
   branch=$(echo "$branches" | fzf +m) &&
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
