@@ -23,7 +23,13 @@ tm() {
   PS3="Please choose your option: "
   local options=()
   local sessions=$(tmux list-sessions -F "#S" 2>/dev/null)
+<<<<<<< HEAD
   print_header "Available sessions"
+=======
+  echo "Available sessions"
+  echo "------------------"
+  echo " "
+>>>>>>> fullscript new maching
 
   if ! test -z "$sessions"
   then
