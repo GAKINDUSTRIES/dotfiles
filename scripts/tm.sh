@@ -13,9 +13,13 @@ tm() {
   echo "Available sessions"
   echo "------------------"
   echo " "
-  while IFS='' read -r line; do
-    options+=("$line")
-  done <<< "$sessions"
+
+  if ! test -z "$sessions"
+  then
+    while IFS='' read -r line; do
+      options+=("$line")
+    done <<< "$sessions"
+  fi
 
   options+=("New Session" "zsh")
 
