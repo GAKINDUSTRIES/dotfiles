@@ -34,8 +34,8 @@ brew 'the_silver_searcher'        # Search tool (also called Ag)
 # tap  'heroku/brew'                # Install heroku CLI
 # brew 'heroku'
 # brew 'node'                       # Install NodeJS
-# brew 'redis'                      # Persistent key-value database
-# brew 'memcached'                  # High performance, distributed memory object caching system
+ brew 'redis'                      # Persistent key-value database
+ brew 'memcached'                  # High performance, distributed memory object caching system
 brew 'tmux'                       # Terminal multiplexer
 brew 'wget'                       # Internet file retriever
 # brew 'yarn', args: ["ignore-dependencies"] # Install yarn but ignore installing node so it uses nvm node instance
