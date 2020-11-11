@@ -34,6 +34,7 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 echo "Installing packages and cask apps..."
 brew tap homebrew/bundle
+brew tap homebrew/cask-fonts
 brew bundle --file=$DOTFILES_ROOT/homebrew/Brewfile
 
 # To install useful key bindings and fuzzy completion:

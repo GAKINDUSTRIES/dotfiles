@@ -52,7 +52,6 @@ bind Up new-window -d -n fullscreen \; swap-pane -s fullscreen.1 \; select-windo
 unbind Down
 bind Down last-window \; swap-pane -s fullscreen.1 \; kill-window -t fullscreen
 
-
 ##################################################################################
 ################################### Navigation ###################################
 ##################################################################################
