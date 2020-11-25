@@ -8,8 +8,9 @@
   "suggest.languageSourcePriority": 99,
   "solargraph.diagnostics": true,
   "solargraph.autoformat": true,
-  "solargraph.completion": true,
   "solargraph.formatting": true,
+  "solargraph.definitions": true,
+  "solargraph.references": true,
   "solargraph.hover": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
