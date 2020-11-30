@@ -44,7 +44,6 @@ brew 'zsh-syntax-highlighting'    # Syntax highlighting for the shell zsh
 brew 'go'
 brew 'tmuxinator'                 # Project templates for Tmux
 
-
 # Apps
 
 # cask 'java'                       # Install JDK which contains JRE + compiler (javac) + other tools
