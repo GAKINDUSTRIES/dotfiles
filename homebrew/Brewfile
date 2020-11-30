@@ -42,7 +42,7 @@ brew 'wget'                       # Internet file retriever
 brew 'tldr'                       # Simplified and community-driven man pages (required for 'help' script)
 brew 'zsh-syntax-highlighting'    # Syntax highlighting for the shell zsh
 brew 'go'
-
+brew 'tmuxinator'                 # Project templates for Tmux
 
 # Apps
 
