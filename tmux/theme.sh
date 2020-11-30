@@ -61,7 +61,19 @@ tm_battery="#[fg=$tm_color_battery]#(~/dotfiles/tmux/bin/battery_percentage.sh) 
 # Display host name and session name
 tm_date="#[fg=$tm_color_inactive] %R %d %b"
 tm_host="#[fg=$tm_color_feature,bold]GAKINDUSTRIES"
-tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
+tm_session_name="#[fg=$tm_color_feature]$tm_icon #S"
 
+# Display cpu and ram stats
+set -g @ram_low_fg_color    "#[fg=colour47]"
+set -g @ram_medium_fg_color "#[fg=colour227]"
+set -g @ram_high_fg_color   "#[fg=colour1]"
+set -g @ram_medium_thresh   "30"    # medium percentage threshold
+set -g @ram_high_thresh     "85"    # high percentage threshold
+
+tm_mem_cpu="#{cpu_fg_color} ⚡ #{cpu_percentage}"
+tm_mem_ram="#{ram_fg_color} 🧠 #{ram_percentage}"
+
+# Set status bar
 set -g status-left $tm_session_name'      '
-set -g status-right $tm_spotify'      '$tm_battery'    '$tm_date'   '$tm_host'  '
+set -g status-right $tm_spotify'        '$tm_mem_ram'   '$tm_mem_cpu'   '$tm_battery'   '$tm_date'   '$tm_host''
+
