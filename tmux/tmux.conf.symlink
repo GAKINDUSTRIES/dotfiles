@@ -14,8 +14,8 @@ unbind C-b
 set-option -g prefix C-a                               # remap prefix from 'C-b' to 'C-a'
 bind-key C-a send-prefix
 
-# The line below is ESSENTIAL!! 
-# It makes vim to work as fast as if it does outside of Tmux. 
+# The line below is ESSENTIAL!!
+# It makes vim to work as fast as if it does outside of Tmux.
 # By no means do remove this line. It's crucial to make vim faster.
 # See https://github.com/tmux/tmux/issues/353#issuecomment-294570322
 set -sg escape-time 10                                 # make delay shorter
@@ -49,6 +49,9 @@ bind y setw synchronize-panes                          # synchronize all panes i
 
 # clear both screen and history
 bind -n C-l send-keys C-l \; run 'sleep 0.1' \; clear-history
+
+# Set thin cursor for insert mode on Vim
+set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
 
 # maximizing and restoring windows
 unbind Up
