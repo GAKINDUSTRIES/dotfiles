@@ -6,58 +6,59 @@ brew 'zsh-completions'
 
 # Install Binaries
 
-brew 'autoconf'                   # Automatic configure script builder
-brew 'automake'                   # Tool for generating GNU Standards-compliant Makefiles
-brew 'libtool'                    # Generic library support script
-brew 'cassandra'                  # Install Apache Cassandra
-brew 'cmake'                      # Cross-platform make
+# brew 'autoconf'                   # Automatic configure script builder
+# brew 'automake'                   # Tool for generating GNU Standards-compliant Makefiles
+# brew 'libtool'                    # Generic library support script
+# brew 'cassandra'                  # Install Apache Cassandra
+# brew 'cmake'                      # Cross-platform make
 brew 'ctags'                      # Install ctags, index methods, classes, variables, and other identifiers, storing the index in a tags file.
 brew 'diff-so-fancy'              # Good-lookin' diffs with diff-highlight and more
 brew 'fd'                         # Simple, fast and user-friendly alternative to find
 brew 'fzf'                        # A command-line fuzzy finder
 brew 'gawk'                       # GNU awk utility
 brew 'gcc'                        # GNU compiler collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D
-brew 'gnupg'                      # GNU Pretty Good Privacy (PGP) package. Needed to install RVM
-brew 'python3'                    # Install Python 3
-brew 'postgresql'                 # Postgres engine
-brew 'postgis'                    # Adds support for geographic objects to PostgreSQL
-brew 'sqlite3'                    # Command line interace for SQLite
-brew 'mysql'                      # Mysql RDBMS
+# brew 'gnupg'                      # GNU Pretty Good Privacy (PGP) package. Needed to install RVM
+# brew 'python3'                    # Install Python 3
+# brew 'postgresql'                 # Postgres engine
+# brew 'postgis'                    # Adds support for geographic objects to PostgreSQL
+# brew 'sqlite3'                    # Command line interace for SQLite
+# brew 'mysql'                      # Mysql RDBMS
 brew 'neovim'                     # My loving dev environment :)
-brew 'openssl'                    # SSL/TLS cryptography library
+# brew 'openssl'                    # SSL/TLS cryptography library
 brew 'reattach-to-user-namespace' # Reattach process (e.g., tmux) to background
 brew 'ripgrep'                    # Search tool like grep and The Silver Searcher
 brew 'the_silver_searcher'        # Search tool (also called Ag)
-brew 'imagemagick'                # Tools and libraries to manipulate images in many eormats
-brew 'fontconfig'                 # XML-based font configuration API for X Windows
-brew 'perl'                       # Perl programming eanguage
-tap  'heroku/brew'                # Install heroku CLI
-brew 'heroku'
-brew 'node'                       # Install NodeJS
-brew 'redis'                      # Persistent key-value database
-brew 'memcached'                  # High performance, distributed memory object caching system
+# brew 'imagemagick'                # Tools and libraries to manipulate images in many eormats
+# brew 'fontconfig'                 # XML-based font configuration API for X Windows
+# brew 'perl'                       # Perl programming eanguage
+# tap  'heroku/brew'                # Install heroku CLI
+# brew 'heroku'
+# brew 'node'                       # Install NodeJS
+ brew 'redis'                      # Persistent key-value database
+ brew 'memcached'                  # High performance, distributed memory object caching system
 brew 'tmux'                       # Terminal multiplexer
 brew 'wget'                       # Internet file retriever
-brew 'yarn', args: ["ignore-dependencies"] # Install yarn but ignore installing node so it uses nvm node instance
+# brew 'yarn', args: ["ignore-dependencies"] # Install yarn but ignore installing node so it uses nvm node instance
 brew 'tldr'                       # Simplified and community-driven man pages (required for 'help' script)
 brew 'zsh-syntax-highlighting'    # Syntax highlighting for the shell zsh
 brew 'go'
-
+brew 'tmuxinator'                 # Project templates for Tmux
 
 # Apps
 
-cask 'java'                       # Install JDK which contains JRE + compiler (javac) + other tools
-cask 'chromedriver'               # Replaces PhantomJS which is no longer maintained
-cask 'clockify'                   # Time tracker
+# cask 'java'                       # Install JDK which contains JRE + compiler (javac) + other tools
+# cask 'chromedriver'               # Replaces PhantomJS which is no longer maintained
+# cask 'clockify'                   # Time tracker
 cask 'kitty'                      # The fast, featureful, GPU based, terminal emulator
 cask 'iterm2'                     # Alternative terminal for kitty
-cask 'google-chrome'              # Google Web browser
+cask 'font-hack-nerd-font'        # Fonts for devicons
+# cask 'google-chrome'              # Google Web browser
 cask 'licecap'                    # Simple animated screen captures
 cask 'ngrok'                      # Tunnel local ports to public URLs and inspect traffic
-cask 'pgadmin4'                   # Simple animated screen captures
+# cask 'pgadmin4'                   # Simple animated screen captures
 cask 'postman'                    # Platform for API development
-cask 'slack'                      # Team communication tool
+# cask 'slack'                      # Team communication tool
 cask 'spotify'                    # Music streaming service
-cask 'sublime-text'               # Text editor
-cask 'vlc'                        # Multimedia player
-cask 'zoomus'                     # Video Conferencing
+# cask 'sublime-text'               # Text editor
+# cask 'vlc'                        # Multimedia player
+# cask 'zoomus'                     # Video Conferencing

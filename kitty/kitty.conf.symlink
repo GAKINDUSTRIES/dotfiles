@@ -24,6 +24,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #:     bold_italic_font Operator Mono Medium Italic
 
 font_size 14
+font_family Hack Nerd Font
 
 #: Font size (in pts)
 

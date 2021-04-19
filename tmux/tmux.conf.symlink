@@ -14,13 +14,17 @@ unbind C-b
 set-option -g prefix C-a                               # remap prefix from 'C-b' to 'C-a'
 bind-key C-a send-prefix
 
-set -sg escape-time 0                                  # make delay shorter
+# The line below is ESSENTIAL!!
+# It makes vim to work as fast as if it does outside of Tmux.
+# By no means do remove this line. It's crucial to make vim faster.
+# See https://github.com/tmux/tmux/issues/353#issuecomment-294570322
+set -sg escape-time 10                                 # make delay shorter
 
 unbind =                                               # tile all windows
 bind = select-layout tiled
 
 # set Zsh as default shell for Tmux
-set-option -g default-command "/bin/zsh"
+set-option -g default-command "/usr/local/bin/zsh"
 
 # edit configuration
 bind e new-window -n '~/.tmux.conf.local' "sh -c '\${EDITOR:-vim} tmux source ~/.tmux.conf && tmux display \"~/.tmux.conf sourced\"'"
@@ -46,12 +50,14 @@ bind y setw synchronize-panes                          # synchronize all panes i
 # clear both screen and history
 bind -n C-l send-keys C-l \; run 'sleep 0.1' \; clear-history
 
+# Set thin cursor for insert mode on Vim
+set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
+
 # maximizing and restoring windows
 unbind Up
 bind Up new-window -d -n fullscreen \; swap-pane -s fullscreen.1 \; select-window -t fullscreen
 unbind Down
 bind Down last-window \; swap-pane -s fullscreen.1 \; kill-window -t fullscreen
-
 
 ##################################################################################
 ################################### Navigation ###################################

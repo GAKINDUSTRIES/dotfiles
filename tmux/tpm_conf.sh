@@ -5,6 +5,7 @@ set-environment -g TMUX_PLUGIN_MANAGER_PATH '~/dotfiles/tmux/.tmux/plugins/'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-cpu'
 
 #### Initialize TMUX plugin manager
 #### (keep this line at the very bottom of tmux.conf)

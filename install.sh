@@ -142,53 +142,54 @@ install_dotfiles () {
   printf "Setting up your Mac... \n\n"
 
   # Create symlink in $HOME. Needed for some scripts
-  link_file $DOTFILES_ROOT/ $HOME/dotfiles
+  # link_file $DOTFILES_ROOT/ $HOME/dotfiles
 
-  section "Brew Cask binary packages"
-  $DOTFILES_ROOT/homebrew/install.sh 2>&1
-  success  "Homebrew installed!!"
+  # section "Brew Cask binary packages"
+  # $DOTFILES_ROOT/homebrew/install.sh 2>&1
+  # success  "Homebrew installed!!"
 
-  section "NVM"
-  $DOTFILES_ROOT/nvm/install.sh
-  success  "Yarn installed!!"
+  # section "NVM"
+  # $DOTFILES_ROOT/nvm/install.sh
+  # success  "Yarn installed!!"
 
-  section "Yarn"
-  $DOTFILES_ROOT/yarn/install.sh
-  success  "Yarn installed!!"
+  # section "Yarn"
+  # $DOTFILES_ROOT/yarn/install.sh
+  # success  "Yarn installed!!"
 
   section "Zsh"
   link_files_in_folder "$DOTFILES_ROOT/zsh"
   $DOTFILES_ROOT/zsh/install.sh
   success "Zsh setup finished!!"
 
-  section "RVM"
-  $DOTFILES_ROOT/ruby/install.sh
-  success  "RVM installed!!"
+  # section "RVM"
+  # $DOTFILES_ROOT/ruby/install.sh
+  # success  "RVM installed!!"
 
-  section "Kitty"
-  link_file "$DOTFILES_ROOT/kitty/kitty.conf.symlink" "$HOME/.config/kitty/kitty.conf"
-  success "Kitty setup finished"
+  # section "Kitty"
+  # mkdir -p "$HOME/.config/kitty"
+  # link_file "$DOTFILES_ROOT/kitty/kitty.conf.symlink" "$HOME/.config/kitty/kitty.conf"
+  # success "Kitty setup finished"
 
-  section "Vim Environment and Neovim"
-  $DOTFILES_ROOT/vim-environment/install.sh
+  # section "Vim Environment and Neovim"
+  # $DOTFILES_ROOT/vim-environment/install.sh
 
-  # Create nvim folder if not exists
-  [ ! -d "$HOME/.config/nvim" ] && mkdir "$HOME/.config/nvim"
-  link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
-  link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
-  success "Vim setup finished"
+  # # # Create nvim folder if not exists
+  # [ ! -d "$HOME/.config/nvim" ] && mkdir "$HOME/.config/nvim"
+  # link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
+  # link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
+  # success "Vim setup finished"
 
-  section "Tmux"
-  link_files_in_folder "$DOTFILES_ROOT/tmux"
-  success "Tmux setup finished"
+  # section "Tmux"
+  # link_files_in_folder "$DOTFILES_ROOT/tmux"
+  # success "Tmux setup finished"
 
-  section "Git"
-  setup_gitconfig
-  success "Git setup finished"
+  # section "Git"
+  # setup_gitconfig
+  # success "Git setup finished"
 
-  section "ignore file"
-  link_file "$DOTFILES_ROOT/ignore.symlink" "$HOME/.ignore"
-  success "Configuration completed. Enjoy :)"
+  # section "ignore file"
+  # link_file "$DOTFILES_ROOT/ignore.symlink" "$HOME/.ignore"
+  # success "Configuration completed. Enjoy :)"
 }
 
 install_dotfiles

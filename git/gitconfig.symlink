@@ -6,6 +6,7 @@
   st = status
   ec = config --global -e
   cob = checkout -b
+  lg  = "log --pretty=format:'%C(yellow)%h%Creset %ad | %C(green)%s%Creset%C(red)%d%Creset %C(blue)[%an]' --graph --decorate --date=short"
   cm = !git add -A && git commit -m
   delete-merged-branches = !git checkout master && !sh -c 'git branch --merged master | grep -v \\master | xargs -n 1 git branch -d'
   amend = commit -a --amend
@@ -14,6 +15,7 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+	sshcommand = ssh -i ~/.ssh/rx_key
 [init]
 	templatedir = ~/.git_template/
 [commit]
