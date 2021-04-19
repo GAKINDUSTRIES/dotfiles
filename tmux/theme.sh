@@ -1,7 +1,3 @@
-### Configuration to make termguicolors work for nvim
-set -g terminal-overrides ',xterm-256color:Tc'
-set -as terminal-overrides ',xterm*:sitm=\E[3m'
-
 #### COLOUR
 tm_icon="♟"
 tm_color_active=colour51
