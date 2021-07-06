@@ -24,7 +24,8 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #:     bold_italic_font Operator Mono Medium Italic
 
 font_size 14
-font_family Hack Nerd Font
+font_family Hack Nerd Font Bold
+
 
 #: Font size (in pts)
 
@@ -912,6 +913,19 @@ color21 #959dcb
 #: kitty remote control facility by prefixing the command line with @.
 #: Any programs running in that window will be allowed to control
 #: kitty. For example::
+
+
+# Needed to run tests in vim
+allow_remote_control yes
+listen_on unix:/tmp/mykitty
+
+export KITTY_LISTEN_ON=unix:/tmp/mykitty-$PPID
+
+map cmd+n next_tab
+map cmd+p previous_tab
+
+map cmd+z kitten mykitten.py
+# map cmd+a goto_layout tall
 
 #:     map ctrl+enter new_window @ some_program
 

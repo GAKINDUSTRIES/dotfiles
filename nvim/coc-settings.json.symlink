@@ -6,22 +6,12 @@
   "codeLens.enable": true,
   "snippets.priority": 100,
   "suggest.languageSourcePriority": 99,
-  "solargraph.diagnostics": true,
-  "solargraph.autoformat": true,
-  "solargraph.formatting": true,
-  "solargraph.definitions": true,
-  "solargraph.references": true,
-  "solargraph.hover": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
     "json",
-    "javascriptreact",
     "graphql",
     "css",
     "scss",
-    "html",
-    "ruby"
+    "html"
   ],
 
   "languageserver": {
