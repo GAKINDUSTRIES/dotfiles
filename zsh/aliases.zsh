@@ -67,6 +67,9 @@ alias kgp='kubectl get pods'
 alias kdp='kubectl describe pods'
 alias kgp='kubectl get deployments'
 
+# Tmux integration
+alias tx='tmuxinator'
+
 # Unalias
 
 case $(type rg) in                      # For oh-my-zsh older versions, check if alias exists
