@@ -44,7 +44,3 @@ gstash() {
       esac
   done
 }
-<<<<<<< HEAD
-=======
-
->>>>>>>  - ch script added

@@ -914,19 +914,6 @@ color21 #959dcb
 #: Any programs running in that window will be allowed to control
 #: kitty. For example::
 
-
-# Needed to run tests in vim
-allow_remote_control yes
-listen_on unix:/tmp/mykitty
-
-export KITTY_LISTEN_ON=unix:/tmp/mykitty-$PPID
-
-map cmd+n next_tab
-map cmd+p previous_tab
-
-map cmd+z kitten mykitten.py
-# map cmd+a goto_layout tall
-
 #:     map ctrl+enter new_window @ some_program
 
 # Needed to run tests in vim
