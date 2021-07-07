@@ -8,5 +8,5 @@
 
 sc(){
   local script=$(ls ~/dotfiles/scripts | sed -e 's/\..*$//' | fzf)
-  test -n "$script" && print -z -- "${script[@]:q:q}"
+  test -n "$script" && print -z -- "${script}"
 }
