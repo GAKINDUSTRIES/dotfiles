@@ -52,6 +52,7 @@ cask 'chromedriver'               # Replaces PhantomJS which is no longer mainta
 cask 'clockify'                   # Time tracker
 cask 'kitty'                      # The fast, featureful, GPU based, terminal emulator
 cask 'iterm2'                     # Alternative terminal for kitty
+cask 'font-hack-nerd-font'        # Fonts for devicons
 cask 'google-chrome'              # Google Web browser
 cask 'licecap'                    # Simple animated screen captures
 cask 'ngrok'                      # Tunnel local ports to public URLs and inspect traffic
