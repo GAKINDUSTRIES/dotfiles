@@ -24,6 +24,8 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #:     bold_italic_font Operator Mono Medium Italic
 
 font_size 14
+font_family Hack Nerd Font Bold
+
 
 #: Font size (in pts)
 
@@ -495,7 +497,31 @@ font_size 14
 #: The 16 terminal colors. There are 8 basic colors, each color has a
 #: dull and bright version. You can also set the remaining colors from
 #: the 256 color table as color16 to color255.
-
+#
+# Ayu Light
+#background            #fafafa
+# foreground            #5b6673
+# cursor                #ff6900
+# selection_background  #f0ede4
+# color0                #000000
+# color8                #323232
+# color1                #ff3333
+# color9                #ff6565
+# color2                #86b200
+# color10               #b8e532
+# color3                #f19618
+# color11               #ffc849
+# color4                #41a6d9
+# color12               #73d7ff
+# color5                #f07078
+# color13               #ffa3aa
+# color6                #4cbe99
+# color14               #7ff0cb
+# color7                #ffffff
+# color15               #ffffff
+# selection_foreground #fafafa
+#
+#
 # Base16 Material Palenight - kitty color config
 # Nate Peterson
 background #292d3e
@@ -889,6 +915,17 @@ color21 #959dcb
 #: kitty. For example::
 
 #:     map ctrl+enter new_window @ some_program
+
+# Needed to run tests in vim
+
+allow_remote_control yes
+listen_on unix:/tmp/mykitty
+export KITTY_LISTEN_ON=unix:/tmp/mykitty-$PPID
+
+map cmd+n next_tab
+map cmd+p previous_tab
+
+map cmd+z kitten mykitten.py
 
 # map cmd+enter   new_window
 # map kitty_mod+n new_os_window
