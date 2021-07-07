@@ -167,6 +167,7 @@ install_dotfiles () {
 
   section "Kitty"
   link_file "$DOTFILES_ROOT/kitty/kitty.conf.symlink" "$HOME/.config/kitty/kitty.conf"
+  link_file "$DOTFILES_ROOT/kitty/mykitten.py.symlink" "$HOME/.config/kitty/mykitten.py"
   success "Kitty setup finished"
 
   section "Vim Environment and Neovim"
