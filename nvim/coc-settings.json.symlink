@@ -1,10 +1,15 @@
 {
   "suggest.noselect": false,
   "suggest.preferCompleteThanJumpPlaceholder": true,
-  "suggest.minTriggerInputLength": 2,
-  "prettier.eslintIntegration": true,
+  "suggest.minTriggerInputLength": 1,
+  "suggest.floatEnable": true,
+  "diagnostic.checkCurrentLine": true,
   "codeLens.enable": true,
   "snippets.priority": 100,
+  "snippets.autoTrigger": true,
+  "snippets.ultisnips.enable": true,
+  "snippets.snipmate.enable": true,
+  "suggest.triggerAfterInsertEnter": true,
   "suggest.languageSourcePriority": 99,
   "solargraph.diagnostics": true,
   "solargraph.autoformat": true,
@@ -51,6 +56,5 @@
     }
   ],
   "explorer.icon.enableNerdfont": true,
-
   "explorer.keyMappings.vmap": { "v": "open:vsplit" }
 }

@@ -927,6 +927,9 @@ map cmd+p previous_tab
 
 map cmd+z kitten mykitten.py
 
+# Search using FZF
+map cmd+f launch --type=overlay --stdin-source=@screen_scrollback /usr/local/bin/fzf --no-sort --no-mouse --exact -i
+
 # map cmd+enter   new_window
 # map kitty_mod+n new_os_window
 # map cmd+n       new_os_window
