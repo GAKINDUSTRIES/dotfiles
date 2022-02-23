@@ -35,6 +35,7 @@ tap  'heroku/brew'                # Install heroku CLI
 brew 'heroku'
 brew 'node'                       # Install NodeJS
 brew 'redis'                      # Persistent key-value database
+brew 'slides'                     # Slides in your terminal
 brew 'memcached'                  # High performance, distributed memory object caching system
 brew 'tmux'                       # Terminal multiplexer
 brew 'wget'                       # Internet file retriever

@@ -22,3 +22,5 @@
   template = ~/.git_template//gitmessage
 [push]
 	default = current
+[pull]
+	ff = only
