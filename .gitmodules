@@ -16,3 +16,6 @@
 [submodule "tmux/.tmux/plugins/tmux-cpu"]
 	path = tmux/.tmux/plugins/tmux-cpu
 	url = git@github.com:tmux-plugins/tmux-cpu.git
+[submodule "neovim-lua"]
+	path = neovim-lua
+	url = https://github.com/GAKINDUSTRIES/neovim-lua
