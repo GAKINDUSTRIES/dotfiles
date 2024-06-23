@@ -54,6 +54,8 @@ cask 'clockify'                   # Time tracker
 cask 'kitty'                      # The fast, featureful, GPU based, terminal emulator
 cask 'iterm2'                     # Alternative terminal for kitty
 cask 'font-hack-nerd-font'        # Fonts for devicons
+cask 'font-meslo-lg-nerd-font'    # Meslo nerd font
+
 cask 'google-chrome'              # Google Web browser
 cask 'licecap'                    # Simple animated screen captures
 cask 'ngrok'                      # Tunnel local ports to public URLs and inspect traffic
@@ -63,4 +65,5 @@ cask 'slack'                      # Team communication tool
 cask 'spotify'                    # Music streaming service
 cask 'sublime-text'               # Text editor
 cask 'vlc'                        # Multimedia player
+cask 'wezterm'                      # cross-platform terminal emulator and multiplexer
 cask 'zoomus'                     # Video Conferencing

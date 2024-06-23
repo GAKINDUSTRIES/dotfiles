@@ -171,17 +171,35 @@ install_dotfiles () {
   success "Kitty setup finished"
 
   section "Vim Environment and Neovim"
-  $DOTFILES_ROOT/vim-environment/install.sh
+  echo "Which Neovim configuration would you like to install?"
+  echo "1) Old configuration"
+  echo "2) New configuration"
+  read -p "Enter your choice (1 or 2): " choice
 
-  # Create nvim folder if not exists
-  [ ! -d "$HOME/.config/nvim" ] && mkdir "$HOME/.config/nvim"
-  link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
-  link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
-  success "Vim setup finished"
+  case $choice in
+      1)
+          echo "Installing the old Neovim configuration..."
+          $DOTFILES_ROOT/vim-environment/install.sh
 
-  section "Tmux"
-  link_files_in_folder "$DOTFILES_ROOT/tmux"
-  success "Tmux setup finished"
+          Create nvim folder if not exists
+          [ ! -d "$HOME/.config/nvim" ] && mkdir "$HOME/.config/nvim"
+          link_file "$DOTFILES_ROOT/nvim/coc-settings.json.symlink" "$HOME/.config/nvim/coc-settings.json"
+          link_file "$DOTFILES_ROOT/nvim/init.vim.symlink" "$HOME/.config/nvim/init.vim"
+          success "Vim setup finished"
+
+          section "Tmux"
+          link_files_in_folder "$DOTFILES_ROOT/tmux"
+          success "Tmux setup finished"          
+          ;;
+      2)
+          echo "Installing the new Neovim configuration..."
+          chmod +x "$DOTFILES_ROOT/neovim-lua/install.sh"
+          $DOTFILES_ROOT/neovim-lua/install.sh
+          ;;
+      *)
+          echo "Invalid choice. Please run the script again and select either 1 or 2."
+          ;;
+esac
 
   section "Git"
   setup_gitconfig
