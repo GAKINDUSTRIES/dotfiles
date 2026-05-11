@@ -74,4 +74,4 @@ tm_mem_ram="#{ram_fg_color} 🧠 #{ram_percentage}"
 
 # Set status bar
 set -g status-left $tm_session_name'      '
-set -g status-right $tm_tunes'       '$tm_mem_ram'   '$tm_mem_cpu'   '$tm_battery'   '$tm_date'   '$tm_host''
+set -g status-right $tm_spotify'       '$tm_mem_ram'   '$tm_mem_cpu'   '$tm_battery'   '$tm_date'   '$tm_host''

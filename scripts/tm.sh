@@ -39,7 +39,7 @@ tm() {
     case $opt in
       "New Session")
 
-      local projects=($(tx list | awk '{if(NR>1)print}' | tr ',' '\n'))
+      local projects=($(GEM_HOME="" GEM_PATH="" tx list 2>/dev/null | awk '{if(NR>1)print}' | tr ',' '\n'))
 
       if [[ ${#projects[@]} == 0 ]]; then
         create_tmux_session
