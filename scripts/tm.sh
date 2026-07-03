@@ -21,20 +21,23 @@ tm() {
 
   # present menu for user to choose which workspace to open
   PS3="Please choose your option: "
-  local options=()
+  # NB: do NOT name this 'options' — that shadows zsh's special $options
+  # associative array and makes zsh-syntax-highlighting emit
+  # "_zsh_highlight:69: bad set of key/value pairs" on every prompt redraw.
+  local tm_options=()
   local sessions=$(tmux list-sessions -F "#S" 2>/dev/null)
   print_header "Available sessions"
 
   if ! test -z "$sessions"
   then
     while IFS='' read -r line; do
-      options+=("$line")
+      tm_options+=("$line")
     done <<< "$sessions"
   fi
 
-  options+=("New Session" "zsh")
+  tm_options+=("New Session" "zsh")
 
-  select opt in "${options[@]}"
+  select opt in "${tm_options[@]}"
   do
     case $opt in
       "New Session")

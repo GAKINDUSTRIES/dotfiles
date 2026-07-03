@@ -144,6 +144,13 @@ install_dotfiles () {
   # Create symlink in $HOME. Needed for some scripts
   link_file $DOTFILES_ROOT/ $HOME/dotfiles
 
+  section "Submodules"
+  # Pull in all git submodules (tmux plugins, neovim config, vim-environment).
+  # Without this, plugin dirs like tmux/.tmux/plugins/* are empty and the tmux
+  # status bar renders blank (e.g. missing CPU/RAM), among other breakage.
+  git -C "$DOTFILES_ROOT" submodule update --init --recursive
+  success "Submodules initialized!!"
+
   section "Brew Cask binary packages"
   $DOTFILES_ROOT/homebrew/install.sh 2>&1
   success  "Homebrew installed!!"
